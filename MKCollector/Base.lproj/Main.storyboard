@@ -47,21 +47,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xxg-j1-Pl6">
-                                <rect key="frame" x="47" y="84" width="280" height="280"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0gE-e0-C3O">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="280" id="TJz-Du-v3c"/>
-                                            <constraint firstAttribute="width" constant="280" id="szt-pb-Dnz"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6M8-mA-JFK">
+                                <rect key="frame" x="47" y="84" width="280" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Hsy-Hs-vTP"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Ytr-ch-6XZ"/>
+                                    <constraint firstAttribute="width" constant="280" id="hGx-Sd-hzt"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="wcn-J5-d4V"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ftY-FT-9Hf">
+                                <rect key="frame" x="47.5" y="267" width="280" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4b-Ko-yEf">
+                                <rect key="frame" x="172" y="317" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ftY-FT-9Hf" firstAttribute="top" secondItem="6M8-mA-JFK" secondAttribute="bottom" constant="33" id="MR0-EB-aIn"/>
+                            <constraint firstItem="ftY-FT-9Hf" firstAttribute="centerX" secondItem="caY-dT-rwr" secondAttribute="centerX" id="Wt1-5f-DCn"/>
+                            <constraint firstItem="6M8-mA-JFK" firstAttribute="centerX" secondItem="caY-dT-rwr" secondAttribute="centerX" id="dyf-cU-yUx"/>
+                            <constraint firstItem="v4b-Ko-yEf" firstAttribute="top" secondItem="ftY-FT-9Hf" secondAttribute="bottom" constant="20" id="iog-ep-p6T"/>
+                            <constraint firstItem="v4b-Ko-yEf" firstAttribute="centerX" secondItem="caY-dT-rwr" secondAttribute="centerX" id="mhN-kt-uX8"/>
+                            <constraint firstItem="6M8-mA-JFK" firstAttribute="top" secondItem="hbd-Jz-cos" secondAttribute="bottom" constant="20" id="nQH-vY-5Zg"/>
+                            <constraint firstItem="ftY-FT-9Hf" firstAttribute="width" secondItem="6M8-mA-JFK" secondAttribute="width" id="z17-nD-emo"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Rdl-Bc-oNq">
