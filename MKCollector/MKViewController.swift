@@ -30,9 +30,18 @@ class MKViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         imagePicker.sourceType = .photoLibrary
         
         present(imagePicker, animated: true, completion: nil)
+         }
     
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        MKImageView.image = image
+        
+        imagePicker.dismiss(animated: true, completion: nil)
     }
+    
+    
     
     
     @IBAction func cameraTapped(_ sender: Any) {
@@ -40,6 +49,15 @@ class MKViewController: UIViewController, UIImagePickerControllerDelegate, UINav
 
     
     @IBAction func addTapped(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let mk = MK(context: context)
+        mk.title = titleTextField.text
+        mk.image = UIImagePNGRepresentation(MKImageView.image!)! as NSData?
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
     }
 
 

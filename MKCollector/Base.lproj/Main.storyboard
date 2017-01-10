@@ -47,7 +47,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="15624915_1846510238930252_8835391165512548352_n.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="6M8-mA-JFK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6M8-mA-JFK">
                                 <rect key="frame" x="47" y="84" width="280" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Hsy-Hs-vTP"/>
@@ -125,7 +125,4 @@
             <point key="canvasLocation" x="117.59999999999999" y="-543.77811094452773"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="15624915_1846510238930252_8835391165512548352_n.jpeg" width="750" height="750"/>
-    </resources>
 </document>
