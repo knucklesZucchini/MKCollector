@@ -16,12 +16,21 @@ class MKViewController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     
     var imagePicker = UIImagePickerController()
+    var mkgame : MK? = nil
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        
+        if mkgame != nil {
+            print("we have an item")
+            
+        } else {
+            print("we don't have an item")
+        
+        }
     
     }
 

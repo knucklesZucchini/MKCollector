@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" id="gma-Zp-wxy">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Iki-dn-8Pq">
                             <connections>
-                                <segue destination="ENr-de-ldc" kind="show" id="f1F-Jx-SsH"/>
+                                <segue destination="ENr-de-ldc" kind="show" identifier="mkgameSegue" id="f1F-Jx-SsH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

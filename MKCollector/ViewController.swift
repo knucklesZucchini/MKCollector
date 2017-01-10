@@ -53,6 +53,18 @@ tableView.reloadData()
         
         }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let mkgame = mkgames[indexPath.row]
+        performSegue(withIdentifier: "mkgameSegue", sender: mkgame)
 
+    }
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! MKViewController
+        nextVC.mkgame = sender as? MK
+    }
+    
+    
 }
 
