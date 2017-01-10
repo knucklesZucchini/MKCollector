@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,14 +18,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
                 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
         do {mkgames = try context.fetch(MK.fetchRequest())
-            print(mkgames)
-
+tableView.reloadData()
         } catch {
         }
         
@@ -34,7 +38,21 @@ class ViewController: UIViewController {
     
     
     }
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return mkgames.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+            let mkgame = mkgames[indexPath.row]
+            cell.textLabel?.text = mkgame.title
+        cell.imageView?.image = UIImage(data: mkgame.image as! Data)
+        
+            return cell
+        
+        }
+    
 
 }
 
