@@ -10,14 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    var mkgames : [MK] = []
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+                let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+        do {mkgames = try context.fetch(MK.fetchRequest())
+            print(mkgames)
+
+        } catch {
+        }
+        
+   
+    
+    
+    
     }
 
 
