@@ -62,11 +62,18 @@ class MKViewController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     @IBAction func addTapped(_ sender: Any) {
         
+        if mkgame != nil {
+            mkgame!.title = titleTextField.text
+            mkgame!.image = UIImagePNGRepresentation(MKImageView.image!)! as NSData?
+        }
+
+        else {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let mk = MK(context: context)
         mk.title = titleTextField.text
         mk.image = UIImagePNGRepresentation(MKImageView.image!)! as NSData?
+        }
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
