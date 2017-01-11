@@ -10,6 +10,7 @@ import UIKit
 
 class MKViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
+    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var addupdatebutton: UIButton!
     @IBOutlet weak var titleTextField: UITextField!
     
@@ -30,7 +31,7 @@ class MKViewController: UIViewController, UIImagePickerControllerDelegate, UINav
             titleTextField.text = mkgame!.title
             addupdatebutton.setTitle("Update", for: .normal)
         } else {
-            print("we don't have an item")
+            deleteButton.isHidden = true
         
         }
     

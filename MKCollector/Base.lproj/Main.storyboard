@@ -84,11 +84,17 @@
                                     <action selector="addTapped:" destination="ENr-de-ldc" eventType="touchUpInside" id="dXb-ch-lWJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nz0-63-HQ6">
+                                <rect key="frame" x="165" y="367" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ftY-FT-9Hf" firstAttribute="top" secondItem="6M8-mA-JFK" secondAttribute="bottom" constant="33" id="MR0-EB-aIn"/>
+                            <constraint firstItem="nz0-63-HQ6" firstAttribute="top" secondItem="v4b-Ko-yEf" secondAttribute="bottom" constant="20" id="Twk-jf-zgb"/>
                             <constraint firstItem="ftY-FT-9Hf" firstAttribute="centerX" secondItem="caY-dT-rwr" secondAttribute="centerX" id="Wt1-5f-DCn"/>
+                            <constraint firstItem="nz0-63-HQ6" firstAttribute="centerX" secondItem="caY-dT-rwr" secondAttribute="centerX" id="aBf-xb-3z3"/>
                             <constraint firstItem="6M8-mA-JFK" firstAttribute="centerX" secondItem="caY-dT-rwr" secondAttribute="centerX" id="dyf-cU-yUx"/>
                             <constraint firstItem="v4b-Ko-yEf" firstAttribute="top" secondItem="ftY-FT-9Hf" secondAttribute="bottom" constant="20" id="iog-ep-p6T"/>
                             <constraint firstItem="v4b-Ko-yEf" firstAttribute="centerX" secondItem="caY-dT-rwr" secondAttribute="centerX" id="mhN-kt-uX8"/>
@@ -115,6 +121,7 @@
                     <connections>
                         <outlet property="MKImageView" destination="6M8-mA-JFK" id="OJh-Z0-mPm"/>
                         <outlet property="addupdatebutton" destination="v4b-Ko-yEf" id="1Ju-y4-TJR"/>
+                        <outlet property="deleteButton" destination="nz0-63-HQ6" id="zZh-CZ-l7Y"/>
                         <outlet property="titleTextField" destination="ftY-FT-9Hf" id="KCo-RR-t8G"/>
                     </connections>
                 </viewController>
