@@ -114,6 +114,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="MKImageView" destination="6M8-mA-JFK" id="OJh-Z0-mPm"/>
+                        <outlet property="addupdatebutton" destination="v4b-Ko-yEf" id="1Ju-y4-TJR"/>
                         <outlet property="titleTextField" destination="ftY-FT-9Hf" id="KCo-RR-t8G"/>
                     </connections>
                 </viewController>

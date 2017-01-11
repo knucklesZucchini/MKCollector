@@ -10,6 +10,7 @@ import UIKit
 
 class MKViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
+    @IBOutlet weak var addupdatebutton: UIButton!
     @IBOutlet weak var titleTextField: UITextField!
     
     @IBOutlet weak var MKImageView: UIImageView!
@@ -27,7 +28,7 @@ class MKViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         if mkgame != nil {
             MKImageView.image = UIImage(data: mkgame!.image as! Data)
             titleTextField.text = mkgame!.title
-            
+            addupdatebutton.setTitle("Update", for: .normal)
         } else {
             print("we don't have an item")
         
