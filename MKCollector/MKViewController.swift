@@ -55,6 +55,13 @@ class MKViewController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     
     
+    @IBAction func deleteTapped(_ sender: Any) {
+              let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        context.delete(mkgame!)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func cameraTapped(_ sender: Any) {
     }
