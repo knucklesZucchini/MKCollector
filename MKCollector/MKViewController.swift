@@ -25,7 +25,8 @@ class MKViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         imagePicker.delegate = self
         
         if mkgame != nil {
-            print("we have an item")
+            MKImageView.image = UIImage(data: mkgame!.image as! Data)
+            titleTextField.text = mkgame!.title
             
         } else {
             print("we don't have an item")
